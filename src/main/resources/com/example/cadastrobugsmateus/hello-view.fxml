@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cadastrobugsmateus.controller.BugController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Label text="Cadastro de Bugs">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="Nome">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="nomeTextField" prefWidth="450.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="Email">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="emailTextField" prefWidth="450.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="Sistema">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </Label>
+            <ComboBox fx:id="systemComboBox" prefWidth="200.0">
+               <HBox.margin>
+                  <Insets right="140.0" />
+               </HBox.margin>
+            </ComboBox>
+            <Label text="Prioridade">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefWidth="200.0">
+         <children>
+            <Label text="Titulo">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="titleTextField" prefWidth="290.0">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </TextField>
+            <ComboBox fx:id="priorityComboBox" prefWidth="150.0" />
+         </children>
+      </HBox>
+      <HBox alignment="TOP_RIGHT" prefWidth="200.0">
+         <children>
+            <Label text="Descrição">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Label>
+            <TextArea fx:id="descriptionTextArea" prefHeight="300.0" prefWidth="450.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="Deseja receber atualizações sobre o bug?">
+               <HBox.margin>
+                  <Insets right="35.0" />
+               </HBox.margin></Label>
+            <RadioButton fx:id="yesRadioButton" mnemonicParsing="false" selected="true" text="Sim">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="att" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="noRadioButton" mnemonicParsing="false" text="Não" toggleGroup="$att" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="220.0" prefWidth="200.0">
+         <children>
+            <Label />
+            <Button fx:id="okButton" mnemonicParsing="false" onAction="#confirmAction" text="Ok">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelAction" text="Cancelar" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
